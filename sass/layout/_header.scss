@@ -1,0 +1,30 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary, 0.5), rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(100% 0, 100% 75vh, 0 100%, 0 0);
+    position: relative;
+    //  อันไหนเป็น child ของอันไหน ก็เอามาใส่เเบบนี้ได้ โดยจะ ใช้แบบ BEM  เมื่อทำแบบนี้เเล้วก็จะได้การเขียยนแบบ Nest กันเเล้ว 
+    &__logo {
+        height: 3.5rem;
+        animation: moveRotate 2s ease-in 1s;
+        animation-fill-mode: backwards;
+        animation-iteration-count: infinite 2s;
+    }
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo-box:hover {
+        animation: moveRotate1 1.5s;
+    }
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
